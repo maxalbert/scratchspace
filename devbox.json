@@ -2,11 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
   "packages": [
     "lazygit@latest",
-    "python@latest"
+    "python@latest",
+    "uv@latest"
   ],
   "shell": {
     "init_hook": [
-      "source $VENV_DIR/bin/activate"
+      "source $VENV_DIR/bin/activate",
+      "export UV_PYTHON=$VENV_DIR/bin/python",
     ],
     "scripts": {
       "test": [
